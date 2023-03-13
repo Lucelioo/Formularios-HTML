@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+            
+            <head>
+                <title>HTML - Formularios</title>
+                <meta charset="UTF - 8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    *{
+                        box-sizing: border-box;
+                    }
+
+                    body{
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    header{
+                        background-color: blue;
+                        padding: 30px;
+                        text-align: center;
+                        font-size: 35px;
+                        color: white;
+                    }
+
+                    nav{
+                        float: left;
+                        width: 30%;
+                        height: 300px;
+                        background: #ccc;
+                        padding: 20px;
+                    }
+                    nav ul{
+                        list-style-type: none;
+                        padding: 0;
+                    }
+
+                    article{
+                        float: left;
+                        padding: 20px;
+                        width: 70%;
+                        background-color: #f1f1f1;
+                        height: 300px;
+                    }
+                    
+                    section::after{
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+
+                    footer{
+                        background-color: #777;
+                        padding: 10px;
+                        text-align: center;
+                        color: white;
+                    }
+
+                    @media (max-width: 600px){
+                        nav,article{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                </style>
+            </head>
+            
+            <body>
+                
+                <header>
+                    <h2>Fale conosco</h2>
+                </header>
+
+                <section>
+
+                    <nav>
+                        <ul>
+                            <li><a href="Layouts - 06.html">Home</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+
+                    <article>
+                        <h1>Contato</h1>
+                        <p>Preencha os campos abaixo</p>
+
+                        <form method="post">
+                           
+                            <div>
+                                <label for="nome">Nome</label><br>
+                                <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                            </div>
+                            
+                            <div>
+                                <label for="email">E-mail</label><br>
+                                <input type="text" name="email" id="email" placeholder="Digite seu email">
+                            </div>
+
+                            <div>
+                                <label for="mensagem">Mensagem</label><br>
+                                <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+                            </div>
+
+                            <div>
+                                <label>Quais linguagens voce prefere?</label>
+                                <input type="radio" name="linguagens" value="html"> HTML
+                                <input type="radio" name="linguagens" value="css"> CSS
+                                <input type="radio" name="linguagens" value="JavaScript"> JavaScript
+                            </div>
+
+                            <div>
+                                <label>Quais linguagens voce sabe?</label>
+                                <input type="checkbox" name="linguagens" value="html"> HTML
+                                <input type="checkbox" name="linguagens" value="css"> CSS
+                                <input type="checkbox" name="linguagens" value="JavaScript"> JavaScript
+                            </div>
+
+                            <div>
+                                <label>Qual cor você prefere?</label>
+                                <select>
+                                    <option value="azul" selected>Azul</option>
+                                    <option value="vermelho">Vermelho</option>
+                                    <option value="verde">Verde</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <input type="submit">
+                            </div>
+
+                        </form>
+                    </article>
+
+                </section>
+
+            </body> 
+
+</html>
